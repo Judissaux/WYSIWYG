@@ -1,0 +1,93 @@
+/*_________________GENERAL__________________*/
+:root {
+    --ecriture: #262626;
+    --background: #f1f1f1;
+    --border: #262626
+}
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--background);
+}
+
+.flexContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;;
+}
+
+h1{
+  color:var(--ecriture);
+}
+/*_________________Bouton__________________*/
+
+.containerBtn {
+  width: 500px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  }
+
+button {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  padding: 10px;
+  color:var(--ecriture);
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: chartreuse;
+}
+
+/*_________________Zone de texte__________________*/
+.zoneLu,
+.zoneEcris,
+.progressContainer {
+  width: 500px;
+  height: 200px;
+  border: 1px solid var(--border);
+  margin: 10px 20px;
+  border-radius: 7px;
+  color: var(--ecriture);
+}
+
+.zoneLu{
+  word-wrap:break-word;
+}
+
+textarea {
+  resize: none;
+  padding: 0;
+  color: var(--ecriture);
+  background-color: var(--background);
+  }
+
+/*_________________Progress Bar__________________*/
+
+.progressContainer {
+  height: 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+.progress {
+  margin: 0px;
+  padding: 0px;
+  border-radius: 20px;
+  height: 8px;
+  border: none;
+}
+
+/*_________________Dark Mode__________________*/
+
+.darkMode{
+  margin-left: 200px;;
+}
