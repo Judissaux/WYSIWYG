@@ -9,7 +9,7 @@ let btn_italic = document.querySelector(".italic");
 let btn_souligne = document.querySelector(".souligne");
 let btn_darkMode = document.querySelector(".darkMode");
 let btn_effacer = document.querySelector(".effacer");
-let toggleTheme = 0
+let toggleTheme = 0;
 /*__________Fonction changement texte________*/
 
 zoneEcris.addEventListener("keyup", () => {
@@ -18,10 +18,10 @@ zoneEcris.addEventListener("keyup", () => {
 /*__________Fonction blocage zone________________*/
 
 zoneEcris.addEventListener("keyup", () => {
-  if(zoneLu.textContent.length>=200){
+  if(zoneLu.textContent.length >= 200){
   zoneEcris.setAttribute("maxlength" , "0");
-}else{
-  zoneEcris.removeAttribute("maxlength")
+}else if(zoneLu.textContent.length <= 200){
+  zoneEcris.removeAttribute("maxlength");
 }})
 
 /*______________Fonction barre de progression__________*/
@@ -63,12 +63,12 @@ btn_darkMode.addEventListener("click", () => {
   if (toggleTheme === 0) {
     btn_darkMode.innerHTML = "Dark Mode Activé";
     document.documentElement.style.setProperty("--ecriture", "#f1f1f1");
-    document.documentElement.style.setProperty("--background", "#262626")
+    document.documentElement.style.setProperty("--background", "#262626");
     document.documentElement.style.setProperty("--border", "#f1f1f1");
     toggleTheme++;
   } else {
     document.documentElement.style.setProperty("--ecriture", "#262626");
-    document.documentElement.style.setProperty("--background", "#f1f1f1")
+    document.documentElement.style.setProperty("--background", "#f1f1f1");
     document.documentElement.style.setProperty("--border", "#262626");
     ;
     btn_darkMode.innerHTML = "Light Mode Activé";
@@ -89,3 +89,4 @@ btn_effacer.addEventListener("click", () => {
   zoneLu.textContent = "";
   progressBar.style.width = "";
 });
+
