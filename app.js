@@ -10,14 +10,17 @@ let btn_souligne = document.querySelector(".souligne");
 let btn_darkMode = document.querySelector(".darkMode");
 let btn_effacer = document.querySelector(".effacer");
 let toggleTheme = 0;
+
 /*__________Fonction changement texte________*/
 
-zoneEcris.addEventListener("keyup", () => {
+zoneEcris.addEventListener("input", () => {
   zoneLu.innerHTML = zoneEcris.value;
 });
 /*__________Fonction blocage zone________________*/
 
-zoneEcris.addEventListener("keyup", () => {
+
+
+zoneEcris.addEventListener("input", () => {
   if(zoneLu.textContent.length >= 200){
   zoneEcris.setAttribute("maxlength" , "0");
 }else if(zoneLu.textContent.length <= 200){
@@ -26,7 +29,7 @@ zoneEcris.addEventListener("keyup", () => {
 
 /*______________Fonction barre de progression__________*/
 
-zoneEcris.addEventListener("keyup", () => {
+zoneEcris.addEventListener("input", () => {
   count = zoneLu.textContent.length;
   progressBar.style.width = count * 0.5 + "%";
   if (count > 0 && count <= 100) {
@@ -77,7 +80,7 @@ btn_darkMode.addEventListener("click", () => {
 });
 /*__________________POP UP__________________*/
 
-zoneEcris.addEventListener("keypress", () => {
+zoneEcris.addEventListener("input", () => {
   if (zoneLu.textContent.length >= 200) {
     alert("Attention le maximum de caractére est atteint!!");
   }
